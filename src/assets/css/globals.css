@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'SFProDisplayReg';
+    src: url(../fonts/SFPRODISPLAYREGULAR.OTF);
+  }
+
+  @font-face {
+    font-family: 'SFProDisplayMed';
+    src: url(../fonts/SFPRODISPLAYBOLD.OTF);
+  }
+
+  @font-face {
+    font-family: 'SFProDisplayBold';
+    src: url(../fonts/SFPRODISPLAYBOLD.OTF);
+  }
+
+  @font-face {
+    font-family: 'PoppinsBold';
+    src: url(../fonts/Poppins-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: 'PoppinsMed';
+    src: url(../fonts/Poppins-Medium.ttf);
+  }
+}
+
+:root {
+  --background: #fff;
+  --foreground: #1b1b1b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fff;
+    --foreground: #1b1b1b;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
