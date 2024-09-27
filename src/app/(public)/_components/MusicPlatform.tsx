@@ -15,7 +15,7 @@ export default function MusicPlatform() {
           </div>
         </div>
         <div className='md:pt-[130px] pt-20 relative'>
-          <div className='bg-[#F0F0F066] shadow-grey border-[10px] border-white rounded-r-[42px] md:pr-16 px-4 py-12 max-w-[921px] music-card opacity-0'>
+          <div className='bg-[#F0F0F066] shadow-grey border-[10px] border-white rounded-[42px] md:pl-12 pl-4 md:pr-16 pr-4 py-12 max-w-[921px] mx-auto music-card opacity-0'>
             <div className='flex flex-col gap-9'>
               <div className='flex gap-4 md:flex-row flex-col'>
                 <Image src={universalLogo} alt='universal' />
@@ -55,14 +55,14 @@ export default function MusicPlatform() {
                 <LinkButton label='Submit Track' href='/' variant='blue' />
               </div>
             </div>
-            <div className='bg-[#3706FD] rounded-full md:text-3xl text-[14px] md:leading-10 font-SFProDisplayBold md:px-10 px-5 md:py-5 py-2 text-white text-center absolute top-[109px] left-1/2 md:w-[606px] w-[300px] overlapping-rod translate-y-10 opacity-0'>
+            <div className='bg-white text-[#000] rounded-[53px] shadow-grey md:text-2xl text-[14px] font-PoppinsMed leading-[26px] md:px-10 px-5 md:py-10 py-2 text-center absolute top-[34px] left-[149px] md:w-[314px] w-[240px] overlapping-cards translate-y-10 opacity-0'>
               Make 100% of the money you earn 💰{' '}
             </div>
-            <div className='bg-[#BD06FD] rounded-full md:text-3xl text-[14px] md:leading-10 font-SFProDisplayBold md:px-10 px-5 md:py-5 py-2 text-white text-center absolute top-[55%] left-[60%] md:w-[606px] w-[300px] overlapping-rod translate-y-10 opacity-0'>
+            <div className='bg-white text-[#000] rounded-[53px] shadow-grey md:text-2xl text-[14px] font-PoppinsMed leading-[26px] md:px-10 px-5 md:py-10 py-2 text-center absolute top-[25%] right-[4%] md:w-[314px] w-[240px] overlapping-cards translate-y-10 opacity-0 z-20'>
               Work directly with your clients 🧑‍🤝‍🧑{' '}
             </div>
-            <div className='bg-[#06FDEE] rounded-full md:text-3xl text-[14px] md:leading-10 font-SFProDisplayBold md:px-10 px-5 md:py-5 py-2 text-[#000] text-center absolute bottom-0 left-[45%] md:w-[606px] w-[300px] overlapping-rod translate-y-10 opacity-0'>
-              It’s your business, we just amplify it 📢
+            <div className='bg-white text-[#000] rounded-[53px] shadow-grey md:text-2xl text-[14px] font-PoppinsMed leading-[26px] md:px-10 px-5 md:py-10 py-2 text-center absolute bottom-3 right-[10%] md:w-[358px] w-[240px] overlapping-cards translate-y-10 opacity-0'>
+            It’s your business, we just amplify it 📢
             </div>
           </div>
         </div>

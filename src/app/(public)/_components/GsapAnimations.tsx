@@ -7,8 +7,22 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function GsapAnimations() {
   useGSAP(() => {
-    const rods = document.querySelectorAll('.overlapping-rod');
-    rods.forEach((rod, index) => {
+    const navbarTimeline = gsap.timeline()
+    navbarTimeline
+      .to("#navbar .path", {
+        stagger:0.1,
+        duration: 0.2,
+        opacity: 1,
+        ease: 'none',
+      })
+      .to('.navbar-btn', {
+        duration: 0.3,
+        scale: 1,
+        opacity: 1,
+      });
+
+    const overlappingCards = document.querySelectorAll('.overlapping-cards');
+    overlappingCards.forEach((rod, index) => {
       gsap.to(rod, {
         scrollTrigger: {
           trigger: rod,
@@ -23,13 +37,8 @@ export default function GsapAnimations() {
         delay: index * 0.1,
       });
     });
-    gsap.to('.button-animate', {
-      duration: 0.3,
-      ease: 'none',
-      delay: 0.5,
-      scale: 1,
-      opacity: 1,
-    });
+
+    
 
     const mainHeadings = document.querySelectorAll('.main-heading');
     mainHeadings.forEach((item) => {
@@ -177,34 +186,29 @@ export default function GsapAnimations() {
       });
     });
 
-    const testimonialCards = document.querySelectorAll('.testimonialCards');
-    testimonialCards.forEach((card, index) => {
-      gsap.to(card, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: index * 0.1,
-        scrollTrigger: {
-          trigger: card,
-          start: '50% bottom',
-        },
-      });
+    gsap.to('.testimonialCards', {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: '.testimonialCards',
+        start: '50% bottom',
+      },
     });
 
-    const logoPaths = document.querySelectorAll('.path');
+    
+    
 
-    logoPaths.forEach((path, index) => {
-      gsap.to(path, {
-        scrollTrigger: {
-          trigger: path,
-          start: '-50% bottom',
-        },
+      gsap.to("#footer .path", {
+        stagger:0.1,
+        scrollTrigger:"#footer .path",
         duration: 0.2,
         opacity: 1,
-        delay: index * 0.05,
         ease: 'none',
       });
-    });
+
+      
   });
   return <></>;
 }

@@ -4,7 +4,7 @@ import { Logo } from '@/components/logoSVG';
 import { footerLinks } from '@/utils/data';
 export default function Footer() {
   return (
-    <footer className='bg-black lg:h-[188px] lg:px-[100px] px-4 py-7 flex md:flex-row flex-col gap-7 md:gap-0 justify-between items-center'>
+    <footer className='bg-black lg:h-[188px] lg:px-[100px] px-4 py-7 flex md:flex-row flex-col gap-7 md:gap-0 justify-between items-center' id='footer'>
       <Link href={'/'}>
         <Logo color='white' width={235} />
       </Link>
