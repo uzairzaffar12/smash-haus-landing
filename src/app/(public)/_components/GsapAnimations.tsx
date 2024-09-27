@@ -120,7 +120,6 @@ export default function GsapAnimations() {
       stagger: 0.3,
     });
 
-    
     gsap.to('#music-section .button', {
       scrollTrigger: '#music-section .button',
       width: 205,

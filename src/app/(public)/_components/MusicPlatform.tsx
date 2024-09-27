@@ -62,7 +62,7 @@ export default function MusicPlatform() {
               Work directly with your clients 🧑‍🤝‍🧑{' '}
             </div>
             <div className='bg-white text-[#000] rounded-[53px] shadow-grey md:text-2xl text-[14px] font-PoppinsMed leading-[26px] md:px-10 px-5 md:py-10 py-2 text-center absolute md:bottom-3 bottom-0 md:left-[67%] right-0 md:w-[358px] w-[240px] overlapping-cards translate-y-10 opacity-0'>
-            It’s your business, we just amplify it 📢
+              It’s your business, we just amplify it 📢
             </div>
           </div>
         </div>
