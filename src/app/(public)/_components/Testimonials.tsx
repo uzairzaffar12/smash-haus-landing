@@ -7,7 +7,7 @@ import { SwiperNavButtons } from './SwiperNavButtons';
 
 export default function Testimonials() {
   return (
-    <section className='max-w-[1440px] mx-auto lg:px-24 px-4 relative pb-24'>
+    <section className='max-w-[1440px] mx-auto lg:px-24 px-4 relative pb-24' id='testimonials-section'>
       <div className='flex flex-col md:gap-9 gap-5'>
         <p className='sm:text-[20px] text-[16px] font-PoppinsBold tracking-[0.22em] md:text-left text-center'>TESTIMONIALS</p>
         <div className='[&_.swiper-slide]:h-auto [&_.swiper]:pt-28'>

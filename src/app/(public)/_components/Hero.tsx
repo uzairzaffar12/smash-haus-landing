@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <>
       <section className='max-w-[1440px] mx-auto '>
-        <div className='flex flex-col md:gap-7 gap-5 pt-24 pb-28 lg:max-w-[898px] mx-auto items-center text-center px-4 lg:px-0'>
+        <div className='flex flex-col md:gap-7 gap-5 pt-24 md:pb-28 pb-16 lg:max-w-[898px] mx-auto items-center text-center px-4 lg:px-0'>
           <h2 className='sub-text translate-y-[-60%] opacity-0 font-SFProDisplayBold tracking-[0.11em] md:text-4xl text-2xl'>MUSIC MAKERS</h2>
           <h1 className='main-heading translate-y-[30%] opacity-0 font-PoppinsBold xl:text-[83px] sm:text-[60px] text-4xl xl:leading-[83px] sm:leading-[70px]'>
             <span>Get Heard. Get Seen. Get Paid.</span>
@@ -18,10 +18,10 @@ export default function Hero() {
             Instantly access music licensing, exposure opportunities, and more from a global network of companies actively seeking music.
           </p>
           <div className='flex gap-4 md:flex-row flex-col z-30'>
-            <div className='w-[56px] anim-button overflow-hidden transition-[width] text-nowrap scale-0'>
+            <div className='w-[56px] hero-btn overflow-hidden transition-[width] text-nowrap scale-0'>
               <LinkButton label='Creator Signup' href={'https://smash.haus/sign-up'} target='_blank' variant='blue' />
             </div>
-            <div className='w-[56px] anim-button overflow-hidden transition-[width] text-nowrap scale-0'>
+            <div className='w-[56px] hero-btn overflow-hidden transition-[width] text-nowrap scale-0'>
               <LinkButton label='Start Hiring' href={'/'} variant='white' />
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function Hero() {
             </div>
           </div>
           <div className='w-[773px] h-[560px] bg-white opacity-30 rounded-[47px] absolute bottom-[-154px] right-[175px] z-20'></div>
-          <div className='w-[808px] h-[588px] bg-white opacity-30 rounded-[47px] absolute top-[-60px] left-[150px] -z-10'></div>
+          <div className='w-[808px] h-[588px] lg:block hidden bg-white opacity-30 rounded-[47px] absolute top-[-60px] left-[150px] -z-10'></div>
 
           <div className='bg-white lg:block hidden rounded-[70px] shadow-grey w-[400px] absolute top-[155px] lg:left-0 left-[-20%] z-40 user-elem translate-y-8 opacity-0'>
             <div className='flex gap-7 md:p-11 p-4 items-center'>

@@ -5,7 +5,7 @@ import universalLogo from '@/assets/images/universal-logo.svg';
 export default function MusicPlatform() {
   return (
     <>
-      <section className='md:pt-[170px] pt-20 max-w-[1440px] mx-auto md:pb-52 pb-24 relative'>
+      <section className='md:pt-[170px] pt-20 max-w-[1440px] mx-auto md:pb-52 pb-24 relative' id='music-section'>
         <div className='text-center relative z-30'>
           <p className='sm:text-[20px] text-[16px] font-PoppinsBold tracking-[0.22em] mb-7 '>WHY WE MATTER</p>
           <div className='max-w-[1023px] mx-auto px-4 lg:px-0'>
@@ -15,7 +15,7 @@ export default function MusicPlatform() {
           </div>
         </div>
         <div className='md:pt-[130px] pt-20 relative'>
-          <div className='bg-[#F0F0F066] shadow-grey border-[10px] border-white rounded-[42px] md:pl-12 pl-4 md:pr-16 pr-4 py-12 max-w-[921px] mx-auto music-card opacity-0'>
+          <div className='bg-[#F0F0F066] shadow-grey border-[10px] border-white rounded-[42px] md:pl-12 pl-4 md:pr-16 pr-4 py-12 max-w-[921px] md:mx-auto mx-4 music-card opacity-0'>
             <div className='flex flex-col gap-9'>
               <div className='flex gap-4 md:flex-row flex-col'>
                 <Image src={universalLogo} alt='universal' />
@@ -51,7 +51,7 @@ export default function MusicPlatform() {
                   Worldwide, All Media, In Perpetuity
                 </p>
               </div>
-              <div className='anim-button w-0 overflow-hidden text-nowrap'>
+              <div className='button w-0 overflow-hidden text-nowrap'>
                 <LinkButton label='Submit Track' href='/' variant='blue' />
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function MusicPlatform() {
             <div className='bg-white text-[#000] rounded-[53px] shadow-grey md:text-2xl text-[14px] font-PoppinsMed leading-[26px] md:px-10 px-5 md:py-10 py-2 text-center absolute top-[25%] right-[4%] md:w-[314px] w-[240px] overlapping-cards translate-y-10 opacity-0 z-20'>
               Work directly with your clients 🧑‍🤝‍🧑{' '}
             </div>
-            <div className='bg-white text-[#000] rounded-[53px] shadow-grey md:text-2xl text-[14px] font-PoppinsMed leading-[26px] md:px-10 px-5 md:py-10 py-2 text-center absolute bottom-3 right-[10%] md:w-[358px] w-[240px] overlapping-cards translate-y-10 opacity-0'>
+            <div className='bg-white text-[#000] rounded-[53px] shadow-grey md:text-2xl text-[14px] font-PoppinsMed leading-[26px] md:px-10 px-5 md:py-10 py-2 text-center absolute md:bottom-3 bottom-0 md:left-[67%] right-0 md:w-[358px] w-[240px] overlapping-cards translate-y-10 opacity-0'>
             It’s your business, we just amplify it 📢
             </div>
           </div>

@@ -7,10 +7,11 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function GsapAnimations() {
   useGSAP(() => {
-    const navbarTimeline = gsap.timeline()
+    // navbar animations
+    const navbarTimeline = gsap.timeline();
     navbarTimeline
-      .to("#navbar .path", {
-        stagger:0.1,
+      .to('#navbar .path', {
+        stagger: 0.1,
         duration: 0.2,
         opacity: 1,
         ease: 'none',
@@ -21,61 +22,35 @@ export default function GsapAnimations() {
         opacity: 1,
       });
 
-    const overlappingCards = document.querySelectorAll('.overlapping-cards');
-    overlappingCards.forEach((rod, index) => {
-      gsap.to(rod, {
-        scrollTrigger: {
-          trigger: rod,
-          once: true,
-          start: '50% bottom',
-        },
-        transform: 'translateY(0)',
+    // hero section animations
+    const heroTimeline = gsap.timeline();
+    heroTimeline
+      .to('.sub-text', {
+        y: 0,
         ease: 'none',
-        duration: 0.3,
+        duration: 0.5,
         opacity: 1,
-        force3D: true,
-        delay: index * 0.1,
-      });
-    });
-
-    
-
-    const mainHeadings = document.querySelectorAll('.main-heading');
-    mainHeadings.forEach((item) => {
-      gsap.to(item, {
-        scrollTrigger: {
-          trigger: item,
-          start: '5% bottom',
-        },
+      })
+      .to('.main-heading', {
         y: 0,
         ease: 'none',
         duration: 0.3,
         opacity: 1,
-        delay: 0.7,
-      });
-    });
-
-    const sectionHeadings = document.querySelectorAll('.section-heading');
-    sectionHeadings.forEach((item) => {
-      gsap.to(item, {
-        scrollTrigger: {
-          trigger: item,
-          start: '5% bottom',
-        },
+      })
+      .to('.paragraph-text', {
         y: 0,
         ease: 'none',
         duration: 0.3,
         opacity: 1,
+      })
+      .to('.hero-btn', {
+        duration: 0.2,
+        scale: 1,
+      })
+      .to('.hero-btn', {
+        duration: 0.2,
+        width: '205px',
       });
-    });
-
-    gsap.to('.paragraph-text', {
-      y: 0,
-      ease: 'none',
-      duration: 0.3,
-      opacity: 1,
-      delay: 0.7,
-    });
 
     gsap.to('.rectangle', {
       scrollTrigger: {
@@ -96,14 +71,6 @@ export default function GsapAnimations() {
       x: 0,
     });
 
-    gsap.to('.sub-text', {
-      y: 0,
-      ease: 'none',
-      duration: 0.5,
-      opacity: 1,
-      delay: 0.7,
-    });
-
     gsap.to('.user-elem', {
       scrollTrigger: '.user-elem',
       duration: 0.5,
@@ -120,49 +87,45 @@ export default function GsapAnimations() {
       delay: 0.5,
     });
 
-    const footerIcons = document.querySelectorAll('.footer-icon');
-    footerIcons.forEach((item, index) => {
-      gsap.to(item, {
-        scrollTrigger: item,
-        x: 0,
-        opacity: 1,
-        duration: 0.5,
-        delay: index * 0.1,
-      });
+    // cards section
+
+    gsap.to('.cards', {
+      opacity: 1,
+      translateX: 0,
+      duration: 0.7,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: '.cards',
+        start: '50% bottom',
+      },
     });
 
-    const musicBoxText = document.querySelectorAll('.musicBox-text');
-    musicBoxText.forEach((item, index) => {
-      gsap.to(item, {
-        scrollTrigger: item,
-        x: 0,
-        opacity: 1,
-        duration: 0.5,
-        delay: index * 0.2,
-      });
+    // music section animations
+    gsap.to('#music-section .section-heading', {
+      scrollTrigger: {
+        trigger: '#music-section .section-heading',
+        start: '5% bottom',
+      },
+      translateY: 0,
+      ease: 'none',
+      duration: 0.3,
+      opacity: 1,
     });
 
-    const buttons = document.querySelectorAll('.anim-button');
+    gsap.to('.musicBox-text', {
+      scrollTrigger: '.musicBox-text',
+      translateX: 0,
+      opacity: 1,
+      duration: 0.5,
+      stagger: 0.3,
+    });
 
-    buttons.forEach((btn) => {
-      const btnTimeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: btn,
-          start: 'top bottom',
-        },
-      });
-
-      btnTimeline
-        .to(btn, {
-          duration: 0.2,
-          scale: 1,
-          delay: 0.7,
-        })
-        .to(btn, {
-          ease: 'none',
-          duration: 0.2,
-          width: '205px',
-        });
+    
+    gsap.to('#music-section .button', {
+      scrollTrigger: '#music-section .button',
+      width: 205,
+      opacity: 1,
+      duration: 0.5,
     });
 
     gsap.to('.music-card', {
@@ -171,24 +134,37 @@ export default function GsapAnimations() {
       duration: 0.5,
     });
 
-    const cards = document.querySelectorAll('.cards');
-
-    cards.forEach((card, index) => {
-      gsap.to(card, {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        delay: index * 0.2,
+    const overlappingCards = gsap.utils.toArray<HTMLElement>('.overlapping-cards');
+    overlappingCards.forEach((item) => {
+      gsap.to(item, {
         scrollTrigger: {
-          trigger: card,
+          trigger: item,
           start: '50% bottom',
         },
+        stagger: 0.3,
+        translateY: 0,
+        ease: 'none',
+        duration: 0.3,
+        opacity: 1,
       });
+    });
+
+    // testimonials section
+
+    gsap.to('#testimonials-section .section-heading', {
+      scrollTrigger: {
+        trigger: '#testimonials-section .section-heading',
+        start: '5% bottom',
+      },
+      translateY: 0,
+      ease: 'none',
+      duration: 0.3,
+      opacity: 1,
     });
 
     gsap.to('.testimonialCards', {
       opacity: 1,
-      y: 0,
+      translateY: 0,
       duration: 0.6,
       stagger: 0.2,
       scrollTrigger: {
@@ -197,18 +173,24 @@ export default function GsapAnimations() {
       },
     });
 
-    
-    
+    // footer section animations
 
-      gsap.to("#footer .path", {
-        stagger:0.1,
-        scrollTrigger:"#footer .path",
-        duration: 0.2,
-        opacity: 1,
-        ease: 'none',
-      });
+    gsap.to('#footer .path', {
+      stagger: 0.1,
+      scrollTrigger: '#footer .path',
+      duration: 0.2,
+      opacity: 1,
+      ease: 'none',
+    });
 
-      
+    gsap.to('.footer-icon', {
+      scrollTrigger: '.footer-icon',
+      translateX: 0,
+      opacity: 1,
+      duration: 0.5,
+      stagger: 0.3,
+    });
   });
+
   return <></>;
 }
