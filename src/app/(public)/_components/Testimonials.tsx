@@ -25,9 +25,8 @@ export default function Testimonials() {
             navigation={false}>
             {testimonialsData.map((testimonial) => {
               return (
-                <>
                   <SwiperSlide key={testimonial.id} className=''>
-                    <div className='flex flex-col gap-7 py-10 md:px-7 px-4 border-[8px] border-white bg-[#F0F0F066] rounded-3xl overflow-hidden testimonialCards opacity-0 translate-y-[100px] h-full'>
+                    <div className='flex flex-col gap-7 py-10 md:px-6 px-4 border-[8px] border-white bg-[#F0F0F066] rounded-3xl overflow-hidden testimonialCards opacity-0 translate-y-[100px] h-full'>
                       <div className='flex gap-5 items-center'>
                         <Image src={testimonial.img} alt={testimonial.author} width={82} height={82} />
                         <div>
@@ -36,11 +35,10 @@ export default function Testimonials() {
                         </div>
                       </div>
                       <div>
-                        <p className='font-PoppinsMed leading-6'>{testimonial.msg}</p>
+                        <p className='font-PoppinsMed leading-6 italic text-[#000]'>{testimonial.msg}</p>
                       </div>
                     </div>
                   </SwiperSlide>
-                </>
               );
             })}
             <SwiperNavButtons />

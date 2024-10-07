@@ -11,9 +11,9 @@ export default function Footer() {
       <div className='flex gap-5'>
         {footerLinks.map((link) => {
           return (
-            <Link key={link.alt} href={link.href} className='footer-icon translate-x-[-30px] opacity-0'>
+            <a key={link.alt} className='footer-icon translate-x-[-30px] opacity-0 cursor-pointer'>
               <Image src={link.src} alt={link.alt} width={47} height={51} className='object-contain block md:w-[42px] md:h-[42px] w-6 h-6' />
-            </Link>
+            </a>
           );
         })}
       </div>

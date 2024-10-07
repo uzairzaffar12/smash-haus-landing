@@ -1,9 +1,10 @@
-import LinkButton from '@/interfaces/LinkButton';
 import netflixLogo from '@/assets/images/netflix-logo.svg';
 import Image from 'next/image';
 import user from '@/assets/images/user.png';
 import { agents } from '@/utils/data';
 import { SonyLogo } from '@/components/IconSVG';
+import Button from '@/interfaces/Button';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -19,10 +20,14 @@ export default function Hero() {
           </p>
           <div className='flex gap-4 md:flex-row flex-col z-30'>
             <div className='w-[56px] hero-btn overflow-hidden transition-[width] text-nowrap scale-0'>
-              <LinkButton label='Creator Signup' href={'https://smash.haus/sign-up'} target='_blank' variant='blue' />
+              <Link href={'https://smash.haus/sign-up'} target='_blank'>
+                <Button label='Creator Signup' variant='blue' />
+              </Link>
             </div>
             <div className='w-[56px] hero-btn overflow-hidden transition-[width] text-nowrap scale-0'>
-              <LinkButton label='Start Hiring' href={'/'} variant='white' />
+              <Link href={"mailto:jobs@smashhaus.com"}>
+                <Button label='Start Hiring' variant='white' />
+              </Link>
             </div>
           </div>
         </div>
@@ -63,7 +68,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className='w-[205px]'>
-                <LinkButton href='/' label='Submit Track' variant='blue' />
+                <Button label='Submit Track' variant='blue' />
               </div>
             </div>
           </div>

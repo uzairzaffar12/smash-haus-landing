@@ -1,6 +1,6 @@
-import LinkButton from '@/interfaces/LinkButton';
 import Image from 'next/image';
 import universalLogo from '@/assets/images/universal-logo.svg';
+import Button from '@/interfaces/Button';
 
 export default function MusicPlatform() {
   return (
@@ -52,7 +52,7 @@ export default function MusicPlatform() {
                 </p>
               </div>
               <div className='button w-0 overflow-hidden text-nowrap'>
-                <LinkButton label='Submit Track' href='/' variant='blue' />
+                <Button label='Submit Track' variant='blue' />
               </div>
             </div>
             <div className='bg-white text-[#000] rounded-[53px] shadow-grey md:text-2xl text-[14px] font-PoppinsMed leading-[26px] md:px-10 px-5 md:py-10 py-2 text-center absolute top-[34px] left-[149px] md:w-[314px] w-[240px] overlapping-cards translate-y-10 opacity-0'>

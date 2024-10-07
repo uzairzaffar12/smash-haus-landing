@@ -1,6 +1,6 @@
-import LinkButton from '@/interfaces/LinkButton';
 import Link from 'next/link';
 import { Logo } from '@/components/logoSVG';
+import Button from '@/interfaces/Button';
 
 export default function Navbar() {
   return (
@@ -9,7 +9,9 @@ export default function Navbar() {
         <Logo color='black' width={235} />
       </Link>
       <div className='sm:w-[220px] w-[130px] navbar-btn shrink-0 scale-[0.6] opacity-0 [&_svg]:sm:block [&_svg]:hidden'>
-        <LinkButton label='Creator Signup' href='https://smash.haus/sign-up' target='_blank' variant='blue' />
+        <Link href={'https://smash.haus/sign-up'} target='_blank'>
+          <Button label='Creator Signup' variant='blue' />
+        </Link>
       </div>
     </nav>
   );

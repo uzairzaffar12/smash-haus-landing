@@ -74,14 +74,14 @@ export const testimonialsData = [
   },
   {
     id: 2,
-    img: alexiImg,
+    img: mikeImg,
     author: 'Mike Polcino',
     company: 'Director, The Simpsons',
     msg: `"As a Director, Musician and Filmmaker, I truly appreciate what SmashHaus and @dylanberryofficial are doing for both musicians and media companies by removing middlemen. I really love the platform.”`,
   },
   {
     id: 3,
-    img: mikeImg,
+    img: alexiImg,
     author: 'Alexi Lalas',
     company: 'Soccer Analyst Fox Sports, ESPN',
     msg: `"SmashHaus is unique in its efficiency, connectivity, and creativity. Beyond the practical technical advantages SmashHaus provides, the people behind the platform are committed, responsive, and helpful."`,
@@ -97,7 +97,7 @@ export const testimonialsData = [
     id: 5,
     img: chrisImg,
     author: 'Christopher Gialanella',
-    company: 'Soccer Analyst Fox Sports, ESPN',
+    company: 'President - Los Angeles Magazine',
     msg: `“SmashHaus is a no brainer. Dylan and the team have really hit the nail on the head by creating a way for composers to directly find new clients.’`,
   },
   {
@@ -120,7 +120,7 @@ export const footerLinks = [
   {
     src: tiktokIcon,
     alt: 'tiktok',
-    href: '/',
+    href: '#',
   },
 
   {
